@@ -1,0 +1,743 @@
+:root{
+    --primary: #2175f5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product_container{
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding:40px;
+    padding-bottom: 70px;
+    overflow: hidden;
+}
+
+.product_card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+}
+
+
+
+.shoeBackground{
+    position: relative;
+    width: 25%;
+    transition: .5s;
+    height: calc(100% - 150px);
+}
+
+.shoeBackground:first-child(){
+     height: calc(100% - 180px);
+}
+
+
+
+
+.first{
+    z-index: 0;
+    animation: 1s width ease;
+}
+
+@keyframes width{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.second{
+    z-index: -1;
+}
+
+.gradient[color="blue"]{
+    background-color: white;
+}
+
+.gradient[color="red"]{
+    background-image: linear-gradient(45deg, #d62926, #ee625f);
+}
+
+.gradient[color="green"]{
+    background-image: linear-gradient(45deg, #11998e, #1ce669);
+}
+
+.gradient[color="orange"]{
+    background-image: linear-gradient(45deg, #fc4a1a, #f7b733);
+}
+
+.gradient[color="black"]{
+    background-image: linear-gradient(45deg, #111, #666);
+}
+
+/* .logo{
+    position: absolute;
+    width: 100px;
+    left: 20px;
+    top: 20px;
+} */
+
+.share{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--primary);
+    transition: .5s;
+}
+
+.share:hover{
+    transform: scale(1.1);
+}
+
+.share i{
+    line-height: 50px;
+}
+
+.nike{
+    position: absolute;
+    top: 85px;
+    left: 15px;
+    font-size: 11rem;
+    text-transform: uppercase;
+    line-height: .9;
+    color: #fff;
+    opacity: .1;
+}
+
+.shoe{
+    position: absolute;
+    width: 93%;
+    opacity: 0;
+    filter: brightness(1.8);
+    bottom: 0;
+    right: 0;
+    top:0;
+    transform: translateX(-1%) translateY(-23%);
+    /* z-index: 55; */
+    transition: .5s;
+}
+
+.shoe.mobile_view{
+    display: none;
+}
+
+.shoe2{
+    transform: translateX(-1%) translateY(-23%);
+}
+
+.shoe.show{
+    opacity: 1;
+}
+
+.info{
+    width: 70%;
+    background-color: #fff;
+    z-index: 1;
+    padding: 35px 40px;
+    box-shadow: 5px 5px 30px #8887876b;
+}
+
+.shoeName{
+    padding: 0 0 10px 0;
+}
+
+.shoeName p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #616060;
+}
+
+.shoeName div{
+    display: flex;
+    align-items: center;
+}
+
+.shoeName div .big{
+    margin-right: 10px;
+    font-size: 2rem;
+    color: #333;
+    line-height: 1;
+}
+
+.shoeName div .new{
+    background-color: var(--primary);
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 13px;
+    padding: 5px 5px 3px;
+    margin-top: -20px;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.shoeName .small {
+    font-weight: 500;
+    color: #44444485;
+    margin-top: 3px;
+    text-transform: capitalize;
+}
+
+.shoeName, .description, .color-container{
+    border-bottom: 1px solid #dadada;
+}
+
+.description{
+    padding: 10px 0;
+}
+
+.pro_lists{
+    color: #808080d4;
+    line-height: 2.1em;
+    font-size: 0.85rem;
+    padding-left: 20px;
+}
+.title{
+    color: #3a3a3ad1;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+
+
+.rupee{
+    font-size: 1.2rem;
+}
+
+.cur_pr{
+    font-size:1.4rem;   
+}
+.extra{
+
+    font-size: 0.9rem;
+    color: #3e3d3da8;
+}
+
+.del-text{
+    font-size: 1rem;
+    color: gray;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cur-text{
+    font-size:1.7rem;
+    color: maroon;
+}
+
+.extra p{
+    font-weight: bold;
+    padding-top: 10px;
+    width: 105%;
+    margin: 0;
+    font-family: none;
+}
+
+.text{
+    color:#555555c7;
+    font-size: 1rem;
+}
+
+.color-container{
+    padding: 10px 0;
+}
+
+.colors{
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.color{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0 10px;
+    border: 5px solid;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.color[color="blue"]{
+    background-color: #2175f5;
+    border-color: #2175f5;
+}
+
+.color[color="red"]{
+    background-color: #f84848;
+    border-color: #f84848;
+}
+
+.color[color="green"]{
+    background-color: #29b864;
+    border-color: #29b864;
+}
+
+.color[color="orange"]{
+    background-color: #ff5521;
+    border-color: #ff5521;
+}
+
+.color[color="black"]{
+    background-color: #444;
+    border-color: #444;
+}
+
+.color.active{
+    border-color: #fff;
+    box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.size-container{
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.sizes{
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.size{
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #eee;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.size.active{
+    background-color: var(--primary);
+    color: #fff;
+    transition: .5s;
+}
+
+.buy-price{
+    padding-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price{
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+}
+
+.price h1{
+    font-weight: 600;
+    font-family: auto;
+    line-height: 1;
+}
+
+.price i{
+    font-size: 1.4rem;
+    margin-right: 1px;
+}
+
+.buy{
+    padding: .7rem 1rem;
+    border: none;
+    background-color: var(--primary);
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.2xpx;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    transition: .5s;
+}
+
+.buy:hover{
+    transform: scale(1.1);
+    color:white;
+}
+
+.buy i{
+    margin-right: 2px;
+}
+
+
+/* Featured css */
+
+.f_intro{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+     padding: 50px 0;
+}
+
+.featured{
+    display: grid;
+    grid-gap:10px;
+    grid-template-columns:repeat(4,1fr);
+    justify-items: center;
+    margin: 50px 0px 20px;
+
+}
+
+.f_image{
+    width: 62%;
+    /* transform: scale(0.5); */
+}
+
+
+#f_color{
+    color: #000000c4 !important;
+}
+
+.f_heading{
+    margin-bottom: 45px;
+    font-weight: bold;
+    font-size: 60px;
+    padding-left: 5px;
+}
+
+.f_img{
+    /* filter: grayscale(1) invert(0.18); */
+    width: 100%;
+}
+
+.fi_img{
+    filter: invert(0.63);
+    margin-left: -7px;
+}
+
+.mc_img{
+    transform: scale(1.1);
+}
+
+.ht_img{
+    transform: scale(1.2);
+    margin-left: -7px;
+    filter: contrast(0.6);
+}
+
+.yf_img{
+    transform: scale(0.7);
+    margin-top: -10px;
+    filter:opacity(0.8) grayscale(0.3);
+}
+
+
+.text_confused{
+    font-size: 1rem !important;
+    line-height: 1.5rem;
+}
+
+.train_text{
+    color: #656363;
+    font-family: auto;
+    font-weight: bold;
+    font-size: 16px !important;
+    line-height: 32px !important;
+}
+
+.course_box{
+    margin-bottom: 30px;
+}
+
+.course_ul{
+    color: #8e8b8b;
+    font-size: 15px !important;
+}
+
+
+@media (max-width: 1070px){
+    .shoe{
+        width: 135%;
+    }
+}
+
+@media (max-width: 1000px){
+    .product_card{
+        flex-direction: column;
+        width: 100%;
+        box-shadow: 0 0 35px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    .product_card > div{
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .shoe{
+        width: 60%;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    .nike{
+        top: 20%;
+        left: 5%;
+    }
+}
+
+
+@media (max-width:768px){
+    .shoe{
+        width: 40%;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    .shoeBackground{
+        height: 50vh !important;
+    }
+    
+    .shoe.desktop_view{
+        display: none;
+    }
+    
+    .shoe.mobile_view{
+        display: block !important;
+        width: 100%;
+        filter: none;
+    }
+
+    .buy-price{
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 600px){
+    .padd_new{
+        padding: 50px 0px !important;
+    }
+    .share{
+        width: 40px;
+        height: 40px;
+    }
+
+    .share i {
+        font-size: 1rem;
+        line-height: 40px;
+    }
+
+    .cur_pr{
+        font-size:1.4rem;   
+    }
+    .extra{
+        font-size: 0.8rem;
+        color: #3e3d3dab;
+    }
+    
+    .del-text{
+        font-size: 0.9rem !important;
+        margin-right:0px;
+    }
+
+    .cur_pr{
+        font-size: 1.2rem !important;
+    }
+    
+    .cur-text{
+        font-size:1.2rem;
+        color: maroon;
+        margin-top: 5px;
+
+        margin-left: 5px;
+    }
+    .shoe{
+        width: 57%;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+    .buy-price{
+        padding-top: 25px;
+    }
+    .pro_lists{
+        font-size: 0.8rem;
+    }
+
+    .pro_lists li{
+        padding-top: 5px;
+    }
+
+    .train_text{
+        font-size: 14px !important;
+    }
+    
+}
+
+
+
+@media (max-width: 490px){
+    .nike{
+        font-size: 7rem;
+    }
+
+    .shoeName div .big{
+        font-size: 1.3rem;
+    }
+
+    .small{
+        font-size: 1rem;
+    }
+
+    .new{
+        padding: 2px 6px;
+        font-size: .9rem;
+    }
+
+    .title{
+        font-size: .9rem;
+    }
+
+    .text{
+        font-size: .8rem;
+    }
+
+    .buy{
+        padding: .5rem .8rem;
+        font-size: .8rem;
+    }
+
+    .price h1{
+        font-size: 1.0rem;
+    
+    }
+
+    .price i{
+        font-size: .9rem;
+    }
+
+    .size{
+        width: 30px;
+        height: 30px;
+        margin: 0 8px;
+        font-size: .9rem;
+        line-height: 30px;
+    }
+
+    .color{
+        margin: 0 6px;
+        width: 0 20px;
+        width: 20px;
+        height: 20px;
+        border-width: 4px;
+    }
+
+    .share{
+        width: 35px;
+        height: 35px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .share i{
+        font-size: .8rem;
+        line-height: 35px;
+    }
+
+    .f_heading{
+        font-size: 2rem;
+    }
+    .featured{
+        margin: 20px 0px 15px;
+        grid-gap: 12px 10px;
+        grid-template-columns:repeat(3,1fr);
+    }
+   
+       
+    
+
+    /* .logo{
+        width: 60px;
+        top: 10px;
+        left: 10px;
+    } */
+
+    .f_container{
+        padding: 0px 10px !important;
+    }
+
+    .f_image{
+        width: 97%;
+    }
+
+    .f_span{
+        grid-column-start:2;
+    }
+
+    .yf_img{
+        transform: scale(0.74);
+        margin-top:0px;
+    }    
+
+    .info{
+        padding: 20px 20px 30px;
+    }
+
+    .cur-text{
+        font-size:1.1rem;
+    }
+
+    .del-text{
+        font-size:0.8rem !important;
+
+    }
+}
+
+@media (max-width: 400px){
+    .buy i{
+        display: none;
+    }
+
+    .del-text{
+        font-size: 0.8rem !important;
+        margin-left: 10px;
+    }
+
+    .cur_pr{
+        font-size: 1.1rem !important;
+    }
+    .product_container{
+        padding: 20px;
+    }
+
+    .shoeName div .new{
+       
+        font-size: 11px;
+        font-weight: bold;
+    }
+
+    .buy{
+        font-size: 12px;
+    }
+   
+}
+
+
+
