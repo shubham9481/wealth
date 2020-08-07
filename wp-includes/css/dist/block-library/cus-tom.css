@@ -1,0 +1,10 @@
+@media screen and (max-width:426px) {
+  .train-img-logo{
+    position: static !important;
+    margin-bottom: 40px;
+  }
+
+  .chngmar{
+    margin-top: 30px !important;
+  }
+}
